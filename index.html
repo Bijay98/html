@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+       
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+           font-size: 1.2rem;
+            font-family: 'Oswald', sans-serif;
+        }
+        .container{
+            margin: 4px;
+            padding: 4px;
+            min-height: 100vh;
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            background: linear-gradient(to right, rgb(255, 146, 146),rgb(255, 208, 208) );
+        }
+        .images{
+            flex-basis: 50%;
+            color: beige;
+            display: grid;
+            gap: 3px;
+            background-color: bisque;
+            grid-template-columns: repeat(3,1fr);
+            grid-auto-rows: 120px;
+        }
+        .box{
+            background-size: cover;
+            background-position:top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            background-blend-mode: hard-light;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .heading{
+           text-align: center;
+        }
+        .sub-heading{
+            text-align: center;
+        }
+        .box:hover{
+            background-color: #999;
+            background-position: center;
+            box-shadow: 0 0 4px white;
+
+        }
+        .col{
+            grid-column: span 2;
+        }
+        .row{
+            grid-row: span 2;
+        }
+        @media(max-width:1024px){
+            .container{
+                flex-direction: column;
+                padding-block: 20px;
+            }
+            .images{
+                width: 100%;
+                padding-inline: 12px;
+                grid-auto-rows: 220px;
+            }
+            .box{
+                grid-row: span 1;
+                grid-column: span 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-left">
+            <h2 class="heading">Technology</h2>
+            <p class="sub-heading">“Technology is best when it brings people together.” ...</p>
+        </div>
+        <div class="images">
+          <div class="box row" style="background-image: url(https://images.unsplash.com/photo-1473308822086-710304d7d30c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWxlY3RyaWNpdHl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60);">electricity</div>
+
+          <div class="box col" style="background-image: url(https://media.istockphoto.com/id/1368237807/photo/businessman-working-modern-compter-document-management-system-virtual-online-documentation.webp?b=1&s=170667a&w=0&k=20&c=mA0cApCnfIWc0XEcZtXz1ELIqo3PFXOz-8eGsl-yhZA=);">information technology</div>
+          
+          <div class="box" style="background-image: url(https://plus.unsplash.com/premium_photo-1682144557019-e85937bc1ba3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1lY2hhbmljc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60);">mechanics</div>
+          
+          <div class="box row" style="background-image: url(https://media.istockphoto.com/id/1389913894/photo/engineering-students-working-in-electonics-lab.webp?b=1&s=170667a&w=0&k=20&c=2E1vf3yMvRY_QOfP3u5Qe6ZKw_k2R0MWDB9Qi1CA_Jk=);">electronics</div>
+          
+          <div class="box col" style="background-image: url(https://media.istockphoto.com/id/1182604339/photo/businessman-using-mobile-smartphone-and-icon-network-connection-data-with-growth-graph.webp?b=1&s=170667a&w=0&k=20&c=aNxhnGNAj4XcnhYM9P6Em6DtkFrUWMZhww-2_zQ6k68=);">communication</div>
+          
+          <div class="box" style="background-image: url(https://images.unsplash.com/photo-1517976487492-5750f3195933?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3BhY2UlMjB0ZWNobm9sb2d5fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);">space</div>
+          
+          <div class="box col" style="background-image: url(https://media.istockphoto.com/id/1440495095/photo/laboratory-investigations-concerning-test-and-medicine-against-covid.webp?b=1&s=170667a&w=0&k=20&c=tBHZCqCLwwweQRJ63JuyiGvUvmkyxNwitWth3fioDqk=);">science</div>
+        </div>
+    </div>
+</body>
+</html>
